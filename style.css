@@ -1,0 +1,107 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.hero .tagline { font-size: 1.5rem; font-style: italic; margin-bottom: 20px; color: #00d4ff; }
+
+/* Buttons */
+.btn, .btn-alt {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn { background: #00d4ff; color: #fff; }
+.btn:hover { background: #0099cc; }
+.btn-alt { background: #333; color: #fff; }
+
+/* Pricing */
+.pricing { padding: 80px 0; background: #fff; }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.price-card {
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.price-card.featured {
+    border: 2px solid #00d4ff;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.price { font-size: 2rem; font-weight: bold; margin: 20px 0; color: #2ecc71; }
+.price span { font-size: 1rem; color: #777; }
+.price-card ul { list-style: none; margin-bottom: 20px; }
+.price-card ul li { margin-bottom: 10px; }
+
+/* Table */
+.team-section { padding: 80px 0; background: #f9f9f9; }
+.table-wrapper { overflow-x: auto; margin-top: 30px; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th { background-color: #00d4ff; color: white; text-transform: uppercase; }
+tr:hover { background-color: #f1f1f1; }
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #222;
+    color: #fff;
+}

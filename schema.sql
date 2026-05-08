@@ -1,9 +1,9 @@
-CREATE DATABASE IF NOT EXISTS entateaskarsafe_db;
-CREATE USER IF NOT EXISTS 'entateaskarsafe_user'@'localhost' IDENTIFIED BY 'Pass2026!';
-GRANT ALL PRIVILEGES ON entateaskarsafe_db.* TO 'entateaskarsafe_user'@'localhost';
+CREATE DATABASE IF NOT EXISTS askarsafe_db;
+CREATE USER IF NOT EXISTS 'askarsafe_user'@'localhost' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON askarsafe_db.* TO 'askarsafe_user'@'localhost';
 FLUSH PRIVILEGES;
 
-USE entateaskarsafe_db;
+USE askarsafe_db;
 
 CREATE TABLE IF NOT EXISTS members (
     id INT AUTO_INCREMENT PRIMARY KEY,

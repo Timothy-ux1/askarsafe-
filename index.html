@@ -1,3 +1,4 @@
+<?php require_once 'db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,28 +59,15 @@
         <div class="container">
             <h2 class="section-title">GROUP H MEMBERS FOR THE WSA PROJECT</h2>
             <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Student Name</th>
-                            <th>Registration Number</th>
-                            <th>Role</th>
-                            <th>Subdomain</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1</td><td>SSEBAKUMBA JOSEPH</td><td>23/U/17370/PS</td><td>Security Officer</td><td><a href="joseph.askarsafe.com">joseph.askarsafe.com</a></td></tr>
-                        <tr><td>2</td><td>NAIGAGA JOYCE FAITH</td><td>23/U/13183/EVE</td><td>Domain Administrator</td><td><a href="joyce.askarsafe.com">joyce.askarsafe.com</a></td></tr>
-                        <tr><td>3</td><td>NALUNKUUMA HELLEN</td><td>23/U/24328/PS</td><td>Project Analyst</td><td><a href="hellen.askarsafe.com">hellen.askarsafe.com</a></td></tr>
-                        <tr><td>4</td><td>NAYIGA WINNIE</td><td>23/U/15707/EVE</td><td>Developer</td><td><a href="winnie.askarsafe.com">winnie.askarsafe.com</a></td></tr>
-                        <tr><td>5</td><td>KISAKYE DAPHINE</td><td>23/U/10022/EVE</td><td>Document Lead</td><td><a href="daphine.askarsafe.com">daphine.askarsafe.com</a></td></tr>
-                        <tr><td>6</td><td>JJUMBA TIMOTHY ROBERT</td><td>23/U/08443/PS</td><td>Project Lead & Admin</td><td><a href="timothy.askarsafe.com">timothy.askarsafe.com</a></td></tr>
-                        <tr><td>7</td><td>MBABAZI LETICIA</td><td>23/U/11230/PS</td><td>Network Administrator</td><td><a href="leticia.askarsafe.com">leticia.askarsafe.com</a></td></tr>
-                        <tr><td>8</td><td>KAKUMBA HALITH</td><td>23/U/08729/EVE</td><td>Developer</td><td><a href="halith.askarsafe.com">halith.askarsafe.com</a></td></tr>
-                        <tr><td>9</td><td>KAYOM JANET</td><td>23/U/09506/EVE</td><td>Logs Administrator</td><td><a href="janet.askarsafe.com">janet.askarsafe.com</a></td></tr>
-                      
-                </table>
+             <table>
+                    <tr><th>Name</th><th>Registration Number</th><th>Role</th><th>Subdomain</th></tr>
+                    <?php
+                    $stmt = $pdo->query("SELECT * FROM members ORDER BY id");
+                    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<tr><td>{$row['name']}</td><td>{$row['registration_number']}</td><td>{$row['role']}</td><td>{$row['subdomain']}</td></tr>";
+                    }
+                    ?>
+            </table>
             </div>
         </div>
     </section>
